@@ -52,38 +52,79 @@ console.log(episode);
   "data": {
     "banner": [
       {
-        "id": 101,
-        "name": "Love in Seoul",
-        "poster": "https://cdn.example/banner1.jpg",
-        "desc": "A romantic comedy about...",
-        "viewCount": 482130,
-        "tags": ["Romance", "Comedy"],
-        "gendres": ["Korean"]
-      }
+        "id": 58,
+        "name": "Balikan Cinta dengan Mantan Suami",
+        "poster": "<url_poster>",
+        "desc": "",
+        "viewCount": "2.1m",
+        "tags": [
+          "Eksklusif"
+        ],
+        "gendres": [
+          "Romansa Miliuner",
+          "CEO",
+          "Kawin Paksa",
+          "Balas Dendam"
+        ]
+      },
+      ...
     ],
     "trending": [
       {
-        "id": 202,
-        "name": "Warrior's Oath",
-        "poster": "https://cdn.example/trending1.jpg",
-        "genres": ["Action", "Historical"]
-      }
+        "id": 59,
+        "name": "Aku Curiga Istriku Ingin Membunuhku Musim 2",
+        "poster": "<url_poster>",
+        "genres": [
+          "Romansa Miliuner",
+          "Hubungan Keluarga",
+          "Balas Dendam",
+          "Identitas Rahasia",
+          "CEO"
+        ]
+      },
+      ...
     ],
     "drama": [
       {
-        "id": 303,
-        "name": "Silent Whisper",
-        "poster": "https://cdn.example/drama1.jpg",
-        "desc": "Thriller mystery...",
-        "viewCount": 193830,
-        "tags": ["Thriller"],
-        "gendres": ["Japanese"]
-      }
+        "id": 58,
+        "name": "Balikan Cinta dengan Mantan Suami",
+        "poster": "<url_poster>",
+        "desc": "",
+        "viewCount": "2.1m",
+        "tags": [
+          "Eksklusif"
+        ],
+        "gendres": [
+          "Romansa Miliuner",
+          "CEO",
+          "Kawin Paksa",
+          "Balas Dendam"
+        ]
+      },
+      ...
     ]
   },
   "tabs": [
-    { "id": 1, "name": "Popular" },
-    { "id": 2, "name": "Latest" }
+    {
+      "id": null,
+      "name": "Populer"
+    },
+    {
+      "id": 2,
+      "name": "Baru"
+    },
+    {
+      "id": 3,
+      "name": "Trending"
+    },
+    {
+      "id": 4,
+      "name": "Romansa"
+    },
+    {
+      "id": 5,
+      "name": "CEO"
+    }
   ]
 }
 ```
@@ -96,23 +137,35 @@ console.log(episode);
 {
   "status": 200,
   "data": {
-    "name": "Love in Seoul",
-    "poster": "https://cdn.example/poster.jpg",
-    "description": "A romantic comedy between..."
+    "name": "Menikah dengan Orang Asing",
+    "poster": "<url_poster>",
+    "description": "Lily pura-pura menjadi tunangan Tristan demi merebut hati ibunya."
   },
   "episodes": [
     {
+      "id": 2862,
       "episodeNumber": 1,
-      "id": 5001,
-      "name": "Episode 1",
-      "videoUrl": "https://stream.example/ep1.m3u8"
+      "isLocked": false,
+      "isLiked": false,
+      "isWatched": false,
+      "duration": 0,
+      "current": true,
+      "videoUrl": "<url_video>",
+      "subtitles": [
+        {
+          "language": "id",
+          "languageDisplayName": "Indonesian",
+          "url": "<url_caption / url_subtitle>"
+        },
+        {
+          "language": "pt",
+          "languageDisplayName": "Portuguese",
+          "url": "<url_caption / url_subtitle>"
+        },
+        ....
+      ]
     },
-    {
-      "episodeNumber": 2,
-      "id": 5002,
-      "name": "Episode 2",
-      "videoUrl": "https://stream.example/ep2.m3u8"
-    }
+    ...
   ]
 }
 ```
@@ -149,14 +202,22 @@ console.log(episode);
 {
   "status": 200,
   "data": {
+    "id": 2862,
     "episodeNumber": 1,
-    "id": 5001,
-    "name": "Episode 1",
-    "videoUrl": "https://stream.example/ep1.m3u8",
     "isLocked": false,
+    "isLiked": false,
+    "isWatched": false,
     "duration": 0,
     "current": true,
-    "isWatched": false
+    "videoUrl": "<url_video>",
+    "subtitles": [
+      {
+        "language": "de",
+        "languageDisplayName": "German",
+        "url": "<url_track>"
+      },
+      ...
+    ]
   }
 }
 ```
